@@ -42,7 +42,7 @@ def main():
         version='0.1',
         author='Kira Noel',
         description='Module to read fixed-width files into Arrow tables.',
-        url='https://gitlab.k8s.cloud.statcan.ca/stcdatascience/fwfr',
+        url='https://github.com/ke-noel/fwfr',
         ext_modules=cythonize([ext]),
         cmdclass={'build_ext': build_ext_},
         packages=find_packages(),

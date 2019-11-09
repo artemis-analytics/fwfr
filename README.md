@@ -4,6 +4,10 @@ reader for reading fixed-width files (tabular data where all fields in a column 
 padded to the same number of bytes) to Arrow tables. Written in C++, with Python bindings. 
 Supports various [encodings](http://demo.icu-project.org/icu-bin/convexp).
 
+For an example of how to use this project, see notebooks/fwfr_sample_usage.ipynb.
+
+Note: core components rely on Apache Arrow, and requires version 0.13 and 0.14. The installation script pulls in version 0.14. If the newest version of Apache Arrow, 0.15, is in the Conda environment, it will cause the installation to fail. I will be updating this project soon to account for these changes, probably in line with Apache Arrow's 1.0 release, when their internal structures will be more stable.
+
 # Installation
 ### Installation from source
 Install and build everything from source into your active Conda environment. Any
@@ -20,20 +24,6 @@ If you want to use the C++ library without Python, the installation script also 
 libfwfr.so and headers in $CONDA\_PREFIX/{lib,include/fwfr}.
 
 Note: if modifying setup.py (the file used to build the Python bindings), note that you cannot use distutils. Wheel uses these. Instead, use setuptools.
-
-### Installation from pre-compiled binaries (not recommended)
-Download the module using the most recent binaries. Download the local-channel.tar.gz
-archive from the most recent pipeline (job: build-recipe) using the GitLab web interface.
-This will install the Python and C++ components in your activate Conda environment.
-Missing dependencies are gathered automatically. Unit tests run after installation.
-```
-conda create -y -n env
-conda activate env
-git clone https://github.com/kira-noel/fwfr.git
-cd fwfr
-cp PATH/TO/LOCAL-CHANNEl.TAR.GZ ./
-./install.sh --conda
-```
 
 # Reference
 ## pyfwfr
