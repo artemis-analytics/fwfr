@@ -26,6 +26,7 @@ jobs:
           # If provided, this version of miniconda will be downloaded and installed. Visit https://repo.continuum.io/miniconda/ for more information on available versions.
           miniconda-version: 'latest' # optional, default is 
           auto-activate-base: false 
+          conda-build-version: 'latest' 
       - shell: bash -l {0}
         run: |
           conda info
