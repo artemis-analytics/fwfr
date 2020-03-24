@@ -24,7 +24,7 @@ requirements:
         - double-conversion
         - icu=58.2
         - numpy >=1.14
-        - pyarrow >=0.14
+        - pyarrow=0.14.1
         - python=3.7
         - setuptools
     run:
