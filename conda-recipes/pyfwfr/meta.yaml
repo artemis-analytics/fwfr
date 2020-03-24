@@ -10,7 +10,7 @@ build:
 
 requirements:
     build:
-        - arrow-cpp=0.14.1
+        - arrow-cpp=0.14
         - cmake >=3.2
         - double-conversion
         - gcc_linux-64 >=5.1
@@ -19,7 +19,7 @@ requirements:
         - make
         - pkg-config
     host:
-        - arrow-cpp=0.14.1
+        - arrow-cpp=0.14
         - cython >=0.29
         - double-conversion
         - icu=58.2
@@ -29,7 +29,7 @@ requirements:
         - setuptools
     run:
         - {{ pin_compatible('numpy', lower_bound='1.14') }}
-        - arrow-cpp=0.14.1
+        - arrow-cpp=0.14
         - double-conversion
         - icu=58.2
         - pyarrow=0.14.1
