@@ -25,6 +25,19 @@ libfwfr.so and headers in $CONDA\_PREFIX/{lib,include/fwfr}.
 
 Note: if modifying setup.py (the file used to build the Python bindings), note that you cannot use distutils. Wheel uses these. Instead, use setuptools.
 
+### Installation from Anaconda Cloud
+The package pyfwfr is available from the Artemis-Analytics repo. You can install it with the following command
+```
+conda install pyfwfr -c Artemis-Analytics -c conda-forge
+```
+The conda-forge repo is required for some of the dependencies.
+
+### Build Package
+You can build pyfwfr. This requires the conda-build package to be installed (```conda install conda-build```).
+```
+conda build conda-recipes/ -c conda-forge
+```
+
 # Reference
 ## pyfwfr
 Main Python module.
